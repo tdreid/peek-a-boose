@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    script(src="https://rawgit.com/tdreid/rough/master/dist/rough.min.js")
+  body
+    canvas(height=diameter, width=diameter, id='canvas')
+    script.
+      const diameter = #{diameter};
+      const radius = diameter / 2;
+      const ctx = document.getElementById('canvas').getContext("2d");
+
+      const rc = rough.canvas(document.getElementById('canvas'));
+
+      rc.circle(radius, radius, diameter, {
+          roughness: 1,
+          strokeWidth: .85,
+          stroke: "black",
+          fill: "gray",
+          hachureAngle: 41
+      });
+
+      rc.circle(radius, radius, diameter, {
+          roughness: 1,
+          strokeWidth: .85,
+          stroke: "black",
+          fill: "gray",
+          hachureAngle: -41
+      });

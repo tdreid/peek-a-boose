@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    script(src="https://rawgit.com/tdreid/rough/master/dist/rough.min.js")
+  body
+    canvas(height=ht, width=wd, id='canvas')
+    script.
+      const height = #{ht};
+      const width = #{wd};
+      const ctx = document.getElementById('canvas').getContext("2d");
+
+      const rc = rough.canvas(document.getElementById('canvas'));
+
+      rc.rectangle(5, 5, width - 10, height - 10, {
+          roughness: 1,
+          strokeWidth: .85,
+          stroke: "black",
+          fill: "gray",
+          hachureAngle: 41
+      });
+
+      rc.rectangle(5, 5, width - 10, height - 10, {
+          roughness: 1,
+          strokeWidth: .85,
+          stroke: "black",
+          fill: "gray",
+          hachureAngle: -41
+      });
