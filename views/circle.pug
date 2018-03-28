@@ -5,7 +5,7 @@ html
   body
     canvas(height=diameter, width=diameter, id='canvas')
     script.
-      const diameter = #{diameter};
+      const diameter = #{diameter} - 4;
       const radius = diameter / 2;
       const ctx = document.getElementById('canvas').getContext("2d");
 
