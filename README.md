@@ -1,7 +1,7 @@
 # PEEK-A-BOOSE
 ## Easy placeholder images with a sketchy feel
 
-![](/docs/img/peek-a-boose-mascot-600x360)
+![](/docs/img/peek-a-boose-mascot-600x360.png)
 
 Add a size in pixels after our URL and you'll get a sketchy placeholder circle.
 
